@@ -1,0 +1,11 @@
+node_modules
+*.log*
+.nuxt
+.nitro
+.cache
+.output
+.env
+dist
+.eslintrc-auto-import.json
+auto-imports.d.ts
+components.d.ts
