@@ -1,3 +1,3 @@
-export function useFoo() {
+export const useFoo = () => {
   return useState('foo', () => 'bar')
 }

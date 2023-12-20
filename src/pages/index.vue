@@ -1,16 +1,14 @@
-<script setup>
-const foo = useFoo()
-console.log(foo.value)
-</script>
-
 <template>
   <div>
-    <NuxtLink to="/list">
-      进入列表页
-    </NuxtLink>
-    <br>
-    <NuxtLink to="/user-admin/111">
-      进入管理员 id 为 111 的用户中心
-    </NuxtLink>
+    <NuxtLayout name="header"/>
+    <NuxtLink to="/list">进入列表页====>>></NuxtLink>
   </div>
 </template>
+
+<script setup>
+  const foo = useFoo()
+  console.log('foo==========>>', foo.value)
+  const route = useRoute()
+  const { data: mountain } = await useFetch(`https://api.nuxtjs.dev/mountains/${route.params.slug}`)
+  console.log(mountain)
+</script>

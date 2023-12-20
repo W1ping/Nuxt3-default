@@ -1,17 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   srcDir: 'src/',
-  modules: [
-    // ...
-    '@pinia/nuxt',
-    '@vueuse/nuxt',
-    '@unocss/nuxt',
-    '@nuxtjs/eslint-module'
-  ],
-  extends: [
-    'plugin:import/errors',
-    'plugin:import/warnings'
-  ],
+  devtools: { enabled: true },
   vite: {
     css: {
       preprocessorOptions: {
@@ -20,5 +10,11 @@ export default defineNuxtConfig({
         }
       }
     }
-  }
+  },
+  modules: [
+    '@pinia/nuxt',
+    '@vueuse/nuxt',
+    '@unocss/nuxt',
+    '@nuxtjs/eslint-module'
+  ]
 })

@@ -1,36 +1,50 @@
 {
-  "name": "nuxt3-default",
-  "version": "0.0.0",
+  "name": "nuxt-app",
   "private": true,
+  "type": "module",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
+    "commit": "git add .&& git-cz",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
-  "dependencies": {
-    "@pinia/nuxt": "^0.4.5",
-    "@vueuse/core": "^9.6.0",
-    "@vueuse/nuxt": "^9.6.0",
-    "pinia": "^2.0.26"
-  },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.39.5",
+    "@nuxt/devtools": "latest",
     "@nuxtjs/eslint-module": "^4.1.0",
-    "@rushstack/eslint-patch": "^1.2.0",
-    "@unocss/nuxt": "^0.53.1",
-    "@vue/eslint-config-prettier": "^7.1.0",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^8.42.0",
+    "@unocss/nuxt": "^0.58.0",
+    "nuxt": "^3.8.2",
+    "sass": "^1.69.5",
+    "vue": "^3.3.12",
+    "vue-router": "^4.2.5"
+  },
+  "dependencies": {
+    "@pinia/nuxt": "^0.5.1",
+    "@rushstack/eslint-patch": "^1.6.1",
+    "@unocss/preset-attributify": "^0.58.0",
+    "@unocss/preset-uno": "^0.58.0",
+    "@unocss/transformer-directives": "^0.58.0",
+    "@vue/eslint-config-prettier": "^8.0.0",
+    "@vueuse/core": "^10.7.0",
+    "@vueuse/nuxt": "^10.7.0",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "cz-customizable": "^7.0.0",
+    "eslint": "^8.56.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-nuxt": "^4.0.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-vue": "^9.9.0",
-    "nuxt": "^3.5.3",
-    "prettier": "^2.8.0",
-    "sass": "^1.56.1"
+    "eslint-plugin-vue": "^9.19.2",
+    "pinia": "^2.1.7",
+    "prettier": "^3.1.1",
+    "unocss": "^0.58.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    },
+    "cz-customizable": {
+      "config": "cz.config.js"
+    }
   }
 }
